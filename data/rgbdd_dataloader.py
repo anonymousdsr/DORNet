@@ -20,41 +20,47 @@ class RGBDD_Dataset(Dataset):
         self.isNoisy = isNoisy
         self.blur_sigma = blur_sigma
 
+        types = ['models', 'plants', 'portraits']
+
         if train:
             if self.downsample == 'real':
                 self.GTs = []
                 self.LRs = []
                 self.RGBs = []
-                list_dir = os.listdir('%s/%s/%s/' % (root_dir, "Train", "RGBDD_RGB"))
-                for n in list_dir:
-                    self.RGBs.append('%s/%s/%s/%s' % (root_dir, "Train", "RGBDD_RGB", n))
-                    self.GTs.append('%s/%s/%s/%s_HR_gt.png' % (root_dir, "Train", "RGBDD_GT", n[:-8]))
-                    self.LRs.append('%s/%s/%s/%s_LR_fill_depth.png' % (root_dir, "Train", "RGBDD_LR", n[:-8]))
+                for type in types:
+                    list_dir = os.listdir('%s/%s/%s_train'% (root_dir, type, type))
+                    for n in list_dir:
+                        self.RGBs.append('%s/%s/%s_train/%s/%s_RGB.jpg' % (root_dir, type, type, n, n))
+                        self.GTs.append('%s/%s/%s_train/%s/%s_HR_gt.png' % (root_dir, type, type, n, n))
+                        self.LRs.append('%s/%s/%s_train/%s/%s_LR_fill_depth.png' % (root_dir, type, type, n, n))
             else:
                 self.GTs = []
                 self.RGBs = []
-                list_dir = os.listdir('%s/%s/%s/' % (root_dir, "Train", "RGBDD_RGB"))
-                for n in list_dir:
-                    self.RGBs.append('%s/%s/%s/%s' % (root_dir, "Train", "RGBDD_RGB", n))
-                    self.GTs.append('%s/%s/%s/%s_HR_gt.png' % (root_dir, "Train", "RGBDD_GT", n[:-8]))
+                for type in types:
+                    list_dir = os.listdir('%s/%s/%s_train'% (root_dir, type, type))
+                    for n in list_dir:
+                        self.RGBs.append('%s/%s/%s_train/%s/%s_RGB.jpg' % (root_dir, type, type, n, n))
+                        self.GTs.append('%s/%s/%s_train/%s/%s_HR_gt.png' % (root_dir, type, type, n, n))
 
         else:
             if self.downsample == 'real':
                 self.GTs = []
                 self.LRs = []
                 self.RGBs = []
-                list_dir = os.listdir('%s/%s/%s/' % (root_dir, "Test", "RGBDD_RGB"))
-                for n in list_dir:
-                    self.RGBs.append('%s/%s/%s/%s' % (root_dir, "Test", "RGBDD_RGB", n))
-                    self.GTs.append('%s/%s/%s/%s_HR_gt.png' % (root_dir, "Test", "RGBDD_GT", n[:-8]))
-                    self.LRs.append('%s/%s/%s/%s_LR_fill_depth.png' % (root_dir, "Test", "RGBDD_LR", n[:-8]))
+                for type in types:
+                    list_dir = os.listdir('%s/%s/%s_test'% (root_dir, type, type))
+                    for n in list_dir:
+                        self.RGBs.append('%s/%s/%s_test/%s/%s_RGB.jpg' % (root_dir, type, type, n, n))
+                        self.GTs.append('%s/%s/%s_test/%s/%s_HR_gt.png' % (root_dir, type, type, n, n))
+                        self.LRs.append('%s/%s/%s_test/%s/%s_LR_fill_depth.png' % (root_dir, type, type, n, n))
             else:
                 self.GTs = []
                 self.RGBs = []
-                list_dir = os.listdir('%s/%s/%s/' % (root_dir, "Test", "RGBDD_RGB"))
-                for n in list_dir:
-                    self.RGBs.append('%s/%s/%s/%s' % (root_dir, "Test", "RGBDD_RGB", n))
-                    self.GTs.append('%s/%s/%s/%s_HR_gt.png' % (root_dir, "Test", "RGBDD_GT", n[:-8]))
+                for type in types:
+                    list_dir = os.listdir('%s/%s/%s_test'% (root_dir, type, type))
+                    for n in list_dir:
+                        self.RGBs.append('%s/%s/%s_test/%s/%s_RGB.jpg' % (root_dir, type, type, n, n))
+                        self.GTs.append('%s/%s/%s_test/%s/%s_HR_gt.png' % (root_dir, type, type, n, n))
 
     def __len__(self):
         return len(self.GTs)
