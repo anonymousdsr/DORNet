@@ -1,14 +1,15 @@
 <p align="center">
 <h2 align="center"> Degradation Oriented and Regularized Network for <br> Real-World Depth Super-Resolution </h2>
 
+<p align="center">
+<img src="Figs/Pipeline.png"/>
+</p>
 
+Overview of DORNet. Given $\boldsymbol D_{up}$ as input, the degradation learning first encodes it to produce degradation representations $\boldsymbol {\tilde{D}}$  and $\boldsymbol D $. Then, $\boldsymbol {\tilde{D}}$,  $\boldsymbol D $, $\boldsymbol D_{lr} $, and $\boldsymbol I_{r}$ are fed into multiple degradation-oriented feature transformation (DOFT) modules, generating the HR depth $\boldsymbol D_{hr}$. Finally, $\boldsymbol D$ and $\boldsymbol D_{hr}$ are sent to the degradation regularization to obtain $\boldsymbol D_{d}$, which is used as input for the degradation loss $\mathcal L_{deg}$ and the contrastive loss $\mathcal L_{cont}$. The degradation regularization only applies during training and adds no extra overhead in testing.
 
-![model](Figs/Pipeline.png)
-
-<center>Overview of DORNet. Given $$ \boldsymbol D_{up} $$ as input, the degradation learning first encodes it to produce degradation representations $\boldsymbol {\tilde{D}}$  and $\boldsymbol D $. Then, $\boldsymbol {\tilde{D}}$,  $\boldsymbol D $, $\boldsymbol D_{lr} $, and $\boldsymbol I_{r} $ are fed into multiple degradation-oriented feature transformation (DOFT) modules, generating the HR depth $\boldsymbol D_{hr} $. Finally, $\boldsymbol D $ and $\boldsymbol D_{hr} $ are sent to the degradation regularization to obtain $\boldsymbol D_{d} $, which is used as input for the degradation loss $\mathcal{L} _{deg} $ and the contrastive loss $ \mathcal{L}_{cont} $. The degradation regularization only applies during training and adds no extra overhead in testing.</center>
-
-![model](Figs/DOFT.png)
-
+<p align="center">
+<img src="Figs/DOFT.png"/>
+</p>
 <center>Degradation-Oriented Feature Transformation (DOFT)</center>
 
 
