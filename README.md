@@ -76,14 +76,16 @@ Test on real-world RGB-D-D
 
 <p align="center">
 <img src="Figs/Params_Time.png"/>
+<br>
+Complexity on RGB-D-D (w/o Noisy) tested by a 4090 GPU. A larger circle diameter indicates a higher inference time.
 </p>
 
 
 ### Visual comparison
 
-<b>Train & test on real-world RGB-D-D: <b/>
-
 <p align="center">
 <img src="Figs/RGBDD.png"/>
+<br>
+Visual results on the real-world RGB-D-D dataset (w/o Noise).
 </p>
 
