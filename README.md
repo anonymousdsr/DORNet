@@ -47,15 +47,19 @@ The model.py and the remaining pre-trained models will be released once the pape
 ### DORNet
 
 ```
-Train on real-world RGB-D-D
+Train on real-world RGB-D-D and TOFDSR
 > python train.py
+Train on synthetic NYU-v2
+> python train.py --scale 4
 ```
 
 ### DORNet-T
 
 ```
-Train on real-world RGB-D-D
+Train on real-world RGB-D-D and TOFDSR
 > python train.py --tiny_model
+Train on synthetic NYU-v2
+> python train.py --scale 4 --tiny_model
 ```
 
 ## Testing
@@ -63,15 +67,19 @@ Train on real-world RGB-D-D
 ### SPFNet
 
 ```
-Test on real-world RGB-D-D
+Test on real-world RGB-D-D and TOFDSR
 > python test.py
+Test on synthetic NYU-v2
+> python test.py --scale 4
 ```
 
 ### SPFNet-T
 
 ```
-Test on real-world RGB-D-D
-> python test.py  --tiny_model
+Test on real-world RGB-D-D and TOFDSR
+> python test.py --tiny_model
+Test on synthetic NYU-v2
+> python test.py --scale 4 --tiny_model
 ```
 
 ## Experiments
