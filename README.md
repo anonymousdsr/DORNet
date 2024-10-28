@@ -37,7 +37,7 @@ mmcv-full==1.7.2
 
 ## Models
 
-Pretrained models can be found in  <a href="https://drive.google.com/drive/folders/1njJPTCmfe4YhLN-95awFrN2RhW5ThRdh?usp=sharing">checkpoints</a>
+Pretrained models can be found in  <a href="https://github.com/anonymousdsr/DORNet/tree/main/checkpoints">checkpoints</a>
 
 The model.py and the remaining pre-trained models will be released once the paper is accepted.
 
