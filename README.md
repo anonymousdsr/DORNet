@@ -9,8 +9,9 @@ Overview of DORNet. Given $\boldsymbol D_{up}$ as input, the degradation learnin
 
 <p align="center">
 <img src="Figs/DOFT.png"/>
+<br>
+Degradation-Oriented Feature Transformation (DOFT)
 </p>
-<center>Degradation-Oriented Feature Transformation (DOFT)</center>
 
 
 ## Dependencies
