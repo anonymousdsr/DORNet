@@ -1,4 +1,4 @@
-<h2 align="center"> :boom::boom: The model.py will be released once the paper is accepted :boom::boom: </h2>
+<h2 align="center"> :boom: The model.py will be released once the paper is accepted :boom: </h2>
 
 <p align="center">
 <h3 align="center"> Degradation Oriented and Regularized Network for <br> Real-World Depth Super-Resolution </h3>
