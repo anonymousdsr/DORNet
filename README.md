@@ -1,7 +1,7 @@
-<h2 align="center"> :star2: The model.py will be released once the paper is accepted :star2: </h2>
+<h2 align="center"> :star2::star2: The model.py will be released once the paper is accepted :star2::star2: </h2>
 
 <p align="center">
-<h2 align="center"> Degradation Oriented and Regularized Network for <br> Real-World Depth Super-Resolution </h2>
+<h3 align="center"> Degradation Oriented and Regularized Network for <br> Real-World Depth Super-Resolution </h3>
 
 <p align="center">
 <img src="Figs/Pipeline.png"/>
