@@ -7,13 +7,6 @@
 
 Overview of DORNet. Given $\boldsymbol D_{up}$ as input, the degradation learning first encodes it to produce degradation representations $\boldsymbol {\tilde{D}}$  and $\boldsymbol D $. Then, $\boldsymbol {\tilde{D}}$,  $\boldsymbol D $, $\boldsymbol D_{lr} $, and $\boldsymbol I_{r}$ are fed into multiple degradation-oriented feature transformation (DOFT) modules, generating the HR depth $\boldsymbol D_{hr}$. Finally, $\boldsymbol D$ and $\boldsymbol D_{hr}$ are sent to the degradation regularization to obtain $\boldsymbol D_{d}$, which is used as input for the degradation loss $\mathcal L_{deg}$ and the contrastive loss $\mathcal L_{cont}$. The degradation regularization only applies during training and adds no extra overhead in testing.
 
-<p align="center">
-<img src="Figs/DOFT.png"/>
-<br>
-Details of the proposed DOFT. $\otimes$ indicates element-wise multiplication.
-</p>
-
-
 ## Dependencies
 
 ```bash
@@ -38,9 +31,8 @@ mmcv-full==1.7.2
 
 ## Models
 
-Pretrained models can be found in  <a href="https://github.com/anonymousdsr/DORNet/tree/main/checkpoints">checkpoints</a>
+Pretrained models on RGB-D-D can be found in  <a href="https://github.com/anonymousdsr/DORNet/tree/main/checkpoints">checkpoints</a> (The remaining pre-trained models will be released once the paper is accepted).
 
-The model.py and the remaining pre-trained models will be released once the paper is accepted.
 
 ## Training
 
